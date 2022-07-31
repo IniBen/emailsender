@@ -14,10 +14,6 @@ let transporter = nodemailer.createTransport({
     auth: {
         user: process.env.MAIL_USERNAME,
         pass: process.env.MAIL_PASSWORD,
-        clientId: process.env.OAUTH_CLIENTID,
-        clientSecret: process.env.OAUTH_CLIENT_SECRET,
-        refreshToken: process.env.OAUTH_REFRESH_TOKEN,
-        accessToken: process.env.OAUTH_ACCESS_TOKEN
     }
 });
 
@@ -25,7 +21,7 @@ let mailOptions = {
     from: 'initechben@gmail.com',
     to: 'initechben@gmail.com',
     subject: 'Nodemailer App',
-    text: 'This is nodemailer app, my zuri task'
+    text: 'This is nodemailer app, use for sending mails, it is one of my Zuri projects'
 }
 
 transporter.sendMail(mailOptions, function(err, data) {
